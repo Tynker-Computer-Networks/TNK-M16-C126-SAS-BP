@@ -1,0 +1,6 @@
+Run app.py
+Open the link to the toy store website:
+Login and the select any product from dashboard to open the product page. http://127.0.0.1:5000/order?id=3
+Change the id in the request url to see other products that are not listed on the dash board to complete the attack.
+ 
+Fix the website go to controller.controller.py
