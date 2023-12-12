@@ -1,0 +1,31 @@
+<script>
+    $(function(){
+        
+        $(".order-btn").click(function(){
+            
+            var cartData = JSON.stringify({ cart: cart, totalPrice: totalPrice });
+
+            $.ajax({
+                url: "{{url_for('blueprint.placeOrder')}}",
+                type: "post",
+                contentType: 'application/json',
+                data: cartData,
+                success: function (result) {
+                    Swal.fire(
+                        'Order Placed!'
+                    ).then(() => {
+                        window.location.href = "/"
+                    })
+                },
+                error: function (result) {
+                    Swal.fire(
+                        'Uh Oh!',
+                        result.responseJSON.message,
+                        'error'
+                    )
+                }
+            })
+        })
+
+    })
+</script>
