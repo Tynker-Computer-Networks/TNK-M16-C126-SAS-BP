@@ -2,6 +2,7 @@ Perform IDOR using Parameters
 ======================
 In this activity, you will perform an IDOR attack by modifying the request parameters, properties and code for the toy website using Burp Suite.
 
+
 <img src= "https://s3.amazonaws.com/media-p.slid.es/uploads/1525749/images/10980281/C126_2_2.4.gif" width = "100%" height = "50%">
 
 
