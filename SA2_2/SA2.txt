@@ -1,20 +1,7 @@
-
-1. Open the link to the toy store website: https://tnk-m16-toywebsite.onrender.com/
-2. Inspect the code and open network tab.
-3. Select a product and click on add to cart
-   a. Observe that request is made to /addToCart
-   b. Click on payload to see that 
-      {
-    "product_id": "3",
-    "price": 2900,
-    "quantity": 1,
-    "total": 2900.49,
-    "name": "Electric Toy Car",
-    "image": "static/images/toy3.png"
-        }
-    
-    all info regarding the product is sent from user end
-4. Inspect and change the value of the product from browser // also use burp suit for the same
-5. Place to order to get item at updated price.
-
- 
+1. Download and Install [Burp Suite](https://portswigger.net/burp/releases/professional-community-2023-10-3-7?requestededition=community&requestedplatform=) to test the attack on the website. 
+2. Open Burp Suite and Open `Proxy` tab, turn off the Intercept and click on `Open Browser`.
+3. Open [Toy Store](https://tnk-m16-toywebsite.onrender.com/) website in the Burp Suite browser.
+4. Select a product from home screen of the website.
+5. Now turn on the intercept so that burp suit holds the request to be seen and edited by us before sending it to the website's server.
+6. Click on `Add To Cart` and check the burp suit for the intercepted request.
+7. Change the price parameters in the request and click on `Forward` button to send the updated request to the server.
